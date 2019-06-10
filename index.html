@@ -51,6 +51,29 @@
             min-height: 500px;
             overflow: auto;
         }
+        ul.submenu {
+            background-color: #eee;
+            border: 1px solid #ccc;
+            text-align: left;
+            position: absolute;
+            top: 20px;
+            left: 0;
+            display: none;
+        }
+        .menu ul li:hover ul.submenu  {
+            display: block;
+        }
+        ul.submenu li {
+            display: block;
+        }
+        ul.submenu li a {
+            display: block;
+            padding: 5px 10px;
+        }
+        .menu ul li {
+            display: inline-block;
+            position: relative;
+        }
     </style>
 </head>
 <body>
@@ -63,7 +86,13 @@
         <div class="menu">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#">About</a>
+                    <ul class="submenu">
+                        <li><a href="#">CV</a></li>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
